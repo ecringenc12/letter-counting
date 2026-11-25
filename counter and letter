@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+	char yaz[100];
+	printf("Bir kelime yaz-> ");
+	scanf("%s",yaz);
+	int i;
+	int sayac=0;
+	for(i=0;i<strlen(yaz);i++)
+	{
+		if(yaz[i]=='a' || yaz[i]=='e' || yaz[i]=='i' || yaz[i]=='o' || yaz[i]=='u')
+		{
+			sayac=sayac+1;
+		}
+	}
+	for(i=strlen(yaz);i>=0;i--)
+	{
+		printf("%c",yaz[i]);
+	}
+	printf("\n%d tane sesli harf vardir.",sayac);
+
+	return 0;
+}
